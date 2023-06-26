@@ -24,9 +24,7 @@ game_date
 
 # COMMAND ----------
 
-year = game_date.split("-")[0]
-month = game_date.split("-")[1]
-date = game_date.split("-")[2]
+year, month, date = tuple(game_date.split("-"))
 
 # COMMAND ----------
 
@@ -59,9 +57,12 @@ trim_json_str = str(trim_json)
 
 # COMMAND ----------
 
-dbutils.fs.put(f"/mnt/mlbanalysisdl/raw/daily_schedule/{game_date}.json", trim_json_str, overwrite=True)
+dbutils.fs.mkdirs(f"/mnt/mlbanalysisdl/raw/daily_schedule/{year}/")
+
+dbutils.fs.put(f"/mnt/mlbanalysisdl/raw/daily_schedule/{year}/{game_date}.json", trim_json_str, overwrite=True)
 
 # COMMAND ----------
 
 # Test
-# df = spark.read.json("/mnt/mlbanalysisdl/raw/daily_schedule/2023-06-18.json")
+# df = spark.read.json(f"/mnt/mlbanalysisdl/raw/daily_schedule/{year}/{game_date}.json")
+# display(df)
