@@ -28,6 +28,7 @@ https://developer.sportradar.com/
 
 
 #### Project Architecture
+![Architecture](https://github.com/asd855280/mlb_analysis/blob/main/materials/Archi-pic.png?raw=true)
 * Storage
 * Compute
 * Orchestration
