@@ -80,6 +80,8 @@ def parse_pbp_info(pbp_info):
                         hitter_last_name = event['at_bat']['hitter']['last_name']
 
                         # Find outcome description of each at bat
+                        if len(event['at_bat']['events']) == 0:
+                            continue
                         if 'flags' in event['at_bat']['events'][-1]:
                             if event['at_bat']['events'][-1]['flags']['is_ab_over']:
                                 at_bat_result_desc = event['at_bat']['description']
