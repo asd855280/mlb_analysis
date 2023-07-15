@@ -14,7 +14,7 @@ v_date_code = int(year + month + date)
 
 # COMMAND ----------
 
-df = spark.sql("""
+df = spark.sql(f"""
 SELECT at_bat_id,
        event_desc,
        game_date,
@@ -31,6 +31,7 @@ SELECT at_bat_id,
        date_code,
        current_timestamp() AS ingestion_date       
   FROM mlb_analysis.silver.atbat_record
+ WHERE date_code = {v_date_code}
 """)
 # display(df)
 df.createOrReplaceTempView("fact_atbat_df")

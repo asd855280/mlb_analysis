@@ -23,7 +23,7 @@ SELECT hitter_id,
        row_number() OVER(PARTITION BY hitter_id ORDER BY date_code DESC) AS newest,
        date_code
   FROM mlb_analysis.silver.atbat_record
---  WHERE date_code = {v_date_code}
+ WHERE date_code = {v_date_code}
 )
 SELECT hitter_id,
        hitter_name,

@@ -14,7 +14,7 @@ v_date_code = int(year + month + date)
 
 # COMMAND ----------
 
-df = spark.sql("""
+df = spark.sql(f"""
 WITH pitcher_profile AS (
 SELECT pitcher_id,
        pitcher_hand,
@@ -23,6 +23,7 @@ SELECT pitcher_id,
        row_number() OVER(PARTITION BY pitcher_id ORDER BY date_code DESC) AS newest,
        date_code
   FROM mlb_analysis.silver.atbat_record
+ WHERE date_code = {v_date_code}
 )
 SELECT pitcher_id,
        pitcher_name,
@@ -32,7 +33,7 @@ SELECT pitcher_id,
   FROM pitcher_profile
  WHERE newest = 1
 """)
-
+# display(df)
 df.createOrReplaceTempView("dim_pitchers_df")
 
 merge_condition = "tgt.pitcher_id = src.pitcher_id"
