@@ -44,3 +44,7 @@ This project runs on SportRadar trial account, so the rate of data retrieval is 
   (Current)Utilize Power BI for analysis and data visulization.  
   (Pending)Utilize Spark ML for predicting each at bat result.
 
+#### Dashboard
+![Dashboard1](https://github.com/asd855280/mlb_analysis/blob/main/materials/Screenshot-batter.png?raw=true)
+
+![Dashboard2](https://github.com/asd855280/mlb_analysis/blob/main/materials/Screenshot-batting-team.png?raw=true)
