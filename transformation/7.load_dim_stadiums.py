@@ -65,6 +65,6 @@ merge_delta_data("final_stadium_df", 'mlb_analysis', 'gold', 'dim_stadiums', mer
 
 # COMMAND ----------
 
-# MAGIC %sql
-# MAGIC SELECT *
-# MAGIC   FROM mlb_analysis.gold.dim_stadiums;
+# %sql
+# SELECT *
+#   FROM mlb_analysis.gold.dim_stadiums;

@@ -41,6 +41,6 @@ merge_delta_data("fact_atbat_df", 'mlb_analysis', 'gold', 'fact_atbat', merge_co
 
 # COMMAND ----------
 
-# MAGIC %sql
-# MAGIC SELECT COUNT(1)
-# MAGIC   FROM mlb_analysis.gold.fact_atbat;
+# %sql
+# SELECT COUNT(1)
+#   FROM mlb_analysis.gold.fact_atbat;

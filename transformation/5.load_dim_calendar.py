@@ -32,7 +32,7 @@ merge_delta_data("dim_calendar_df", 'mlb_analysis', 'gold', 'dim_calendar', merg
 
 # COMMAND ----------
 
-# MAGIC %sql
-# MAGIC SELECT *
-# MAGIC   FROM mlb_analysis.gold.dim_calendar
-# MAGIC ORDER BY date_code;
+# %sql
+# SELECT *
+#   FROM mlb_analysis.gold.dim_calendar
+# ORDER BY date_code;

@@ -1,6 +1,6 @@
 # Databricks notebook source
 # MAGIC %md
-# MAGIC ## Retrieve Game info for the imput date
+# MAGIC ## Retrieve Game info for the input date
 
 # COMMAND ----------
 
