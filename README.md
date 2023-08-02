@@ -38,7 +38,7 @@ This project runs on SportRadar trial account, so the rate of data retrieval is 
 #### Project Architecture
 ![Architecture](https://github.com/asd855280/mlb_analysis/blob/main/materials/Archi-pic.png?raw=true)
 * **Storage**  
-  All raw data and Unity Catalog managed tables data are stored in Azure Data Lake Storage Gen 2
+  All raw data and Unity Catalog managed tables data are stored in Azure Data Lake Storage Gen 2.
   Unity Catalog provide a centralized platform to manage all tables, including data that is in original form. It also provides access control by External location or credential, so users or organzitions can really fine-grained the access control based on contextual factors. For example, assigning sales related tables for sales department employees, so that they can access to sales related data for analysis or desicion making. However, the director of sales department may also wants to have access to employee related tables for some internal performance review purposes. In this scenario, the data team can grant sales related credential to the entire sales department, while greant employee related credential to HR department and director of sales department. Another exmaple for fine-grained access control could be in the summer, there are interns come in only work on a specific project for a short priod of time. Data team do not need to grant those inters same credential as other full-time employees in the same team, instead, only granting them related external location will be sufficient while maintain security on some sensitive data.  
 * **Compute**  
   All ETL processes and computing execution run on Databricks interactive cluster, single node mode.
