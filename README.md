@@ -2,7 +2,7 @@
 Analyzing MLB players performance.
 
 Project are established on top of Databricks with Azure Storage and Azure Data Factory.
-Fetched data are stored as raw form in Azure Data Lake Storage Gen 2 Container, then we use Databricks notebook to retrieve and transform data into play by play details data as the silver layer. On top of that, we build a simple star schema with one fact table, four dimension tables as the Gold layer for Power BI to consume.
+Fetched data are stored as raw form in Azure Data Lake Storage Gen 2 Container, then utilizing Databricks notebook to retrieve and transform data into play by play details data as the silver layer. On top of that, by using notebook, building a simple star schema with one fact table, four dimension tables as the Gold layer for Power BI to consume.
 
 ### Agenda
 
@@ -26,6 +26,8 @@ Analyzing pitchers and batters performance by following dimensions
   2. Batting Avg by opposing team.
   3. Batting Avg by stadium.
   4. Batting Avg by month.
+
+The purpose of the outcome dashboard is to provide analysis that helps us understand how plays performan when facing different types of opponents.
 
 #### Data Source
 Data is retrieved from APIs provided by Sport Radar developer
